@@ -605,9 +605,9 @@ var _hmt = _hmt || [];
       <p style="margin:0 0 12px">这是 Apple 对未公证应用的通用安全提示，<strong style="color:#fff">并非软件真的损坏</strong>。</p>
       <p style="margin:0 0 10px">DeepSeal 采用<strong style="color:#fff">完全本地化架构</strong>，所有数据都在你的设备上处理，不依赖任何云服务。我们没有将应用提交 Apple 公证，是因为我们<strong style="color:#3ddc84">拒绝将你的任何信息关联到 Apple 账户</strong>——这和我们零信任的设计理念一脉相承。</p>
       <p style="margin:0 0 6px">打开终端，按顺序执行以下两步：</p>
-      <p style="margin:0 0 2px;font-size:13px;color:rgba(255,255,255,0.5)">① 解除 DMG 安装包的隔离标记：</p>
+      <p style="margin:0 0 2px;font-size:13px;color:rgba(255,255,255,0.5)">① 解除 DMG 安装包的隔离标记（<strong style="color:rgba(255,255,255,0.8)">~/Downloads</strong> 即你的「下载」文件夹，如果你的下载目录不同，请替换为实际路径，或把 DMG 文件直接拖进终端自动填入路径）：</p>
       <code style="display:block;background:rgba(0,0,0,0.4);color:#3ddc84;padding:10px 14px;border-radius:6px;font-size:13px;margin:0 0 10px;user-select:all">xattr -cr ~/Downloads/DeepSeal-*.dmg</code>
-      <p style="margin:0 0 2px;font-size:13px;color:rgba(255,255,255,0.5)">② 打开 DMG 安装 DeepSeal 后，再解除应用本身的隔离标记：</p>
+      <p style="margin:0 0 2px;font-size:13px;color:rgba(255,255,255,0.5)">② 打开 DMG，把 DeepSeal 拖入 Applications 安装后，再解除应用本身的隔离标记：</p>
       <code style="display:block;background:rgba(0,0,0,0.4);color:#3ddc84;padding:10px 14px;border-radius:6px;font-size:13px;margin:0 0 12px;user-select:all">xattr -cr /Applications/DeepSeal.app</code>
       <p style="margin:0 0 4px;font-size:13px;color:rgba(255,255,255,0.5)">以上命令仅移除 Apple 添加的隔离标记，不会修改应用本身。</p>
       <p style="margin:0;font-size:13px;color:rgba(255,255,255,0.5)">知名开源软件如 <strong style="color:rgba(255,255,255,0.7)">IINA</strong>、<strong style="color:rgba(255,255,255,0.7)">Stats</strong> 等也采用同样的方式。</p>
